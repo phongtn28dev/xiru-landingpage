@@ -44,12 +44,12 @@ export function WaterfallWrapper({ children }: { children: React.ReactNode }) {
       style={{ background: 'linear-gradient(180deg, #19150D 0%, #1C241C 14.73%, #1C241C 100%)' }}
     >
       {/* Section content renders first */}
-      <div className="relative">
+      <div className="relative z-10">
         {children}
       </div>
       {/* Canvas overlays — constrained to 1080px centered */}
       <div
-        className="pointer-events-none absolute inset-x-0 z-20 flex justify-center"
+        className="pointer-events-none absolute inset-x-0 z-0 flex justify-center"
         style={{ top: canvasStyle.top, height: canvasStyle.height }}
       >
         <div className="relative w-full max-w-[1080px]">
