@@ -1,8 +1,7 @@
-/* Cinematic scroll-triggered reveal wrapper using Framer Motion */
+/* Scroll-triggered reveal using IntersectionObserver + CSS animations (zero JS bundle) */
 'use client';
 
-import { motion } from 'framer-motion';
-import type { ReactNode } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -11,12 +10,12 @@ interface ScrollRevealProps {
   direction?: 'up' | 'down' | 'left' | 'right' | 'none';
 }
 
-const directionOffset = {
-  up: { y: 40, x: 0 },
-  down: { y: -40, x: 0 },
-  left: { x: 40, y: 0 },
-  right: { x: -40, y: 0 },
-  none: { x: 0, y: 0 },
+const directionTransform = {
+  up: 'translateY(40px)',
+  down: 'translateY(-40px)',
+  left: 'translateX(40px)',
+  right: 'translateX(-40px)',
+  none: 'translate(0,0)',
 };
 
 export function ScrollReveal({
@@ -25,17 +24,38 @@ export function ScrollReveal({
   delay = 0,
   direction = 'up',
 }: ScrollRevealProps) {
-  const offset = directionOffset[direction];
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.style.opacity = '1';
+          el.style.transform = 'translate(0,0)';
+          observer.unobserve(el);
+        }
+      },
+      { rootMargin: '-50px', threshold: 0 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, ...offset }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 0.7, delay, ease: [0.25, 0.46, 0.45, 0.94] as const }}
+    <div
+      ref={ref}
       className={className}
+      style={{
+        opacity: 0,
+        transform: directionTransform[direction],
+        transition: `opacity 0.7s cubic-bezier(0.25,0.46,0.45,0.94) ${delay}s, transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94) ${delay}s`,
+        willChange: 'opacity, transform',
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

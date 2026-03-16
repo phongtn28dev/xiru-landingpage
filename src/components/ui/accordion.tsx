@@ -1,9 +1,8 @@
-/* FAQ accordion with smooth height animation — client component */
+/* FAQ accordion with CSS height animation — no framer-motion dependency */
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 interface AccordionItem {
   question: string;
@@ -41,24 +40,43 @@ export function Accordion({ items }: AccordionProps) {
               }`}
             />
           </button>
-          <AnimatePresence>
-            {openIndex === i && (
-              <motion.div
-                id={`faq-panel-${i}`}
-                role="region"
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
-              >
-                <p className="px-5 pb-5 font-body-alt text-[14px] leading-[22px] font-light text-text-muted">
-                  {item.answer}
-                </p>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <AccordionPanel isOpen={openIndex === i} id={`faq-panel-${i}`}>
+            <p className="px-5 pb-5 font-body-alt text-[14px] leading-[22px] font-light text-text-muted">
+              {item.answer}
+            </p>
+          </AccordionPanel>
         </div>
       ))}
+    </div>
+  );
+}
+
+/* CSS grid-template-rows trick for smooth height animation */
+function AccordionPanel({
+  isOpen,
+  id,
+  children,
+}: {
+  isOpen: boolean;
+  id: string;
+  children: React.ReactNode;
+}) {
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <div
+      id={id}
+      role="region"
+      style={{
+        display: 'grid',
+        gridTemplateRows: isOpen ? '1fr' : '0fr',
+        opacity: isOpen ? 1 : 0,
+        transition: 'grid-template-rows 0.3s ease-in-out, opacity 0.3s ease-in-out',
+      }}
+    >
+      <div ref={contentRef} style={{ overflow: 'hidden' }}>
+        {children}
+      </div>
     </div>
   );
 }

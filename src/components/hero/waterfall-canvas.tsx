@@ -1,10 +1,17 @@
+/* Waterfall decorative image — lazy-loaded WebP via next/image */
+
+import Image from 'next/image';
+
 export function WaterfallCanvas() {
   return (
-    <img
-      src="/images/hero/waterfall.svg"
-      alt="Waterfall Decoration"
-      className="pointer-events-none absolute inset-0 top-10 h-full w-full object-contain object-top"
+    <Image
+      src="/images/hero/waterfall-bg.webp"
+      alt=""
+      fill
+      className="pointer-events-none top-10 object-contain object-top"
       aria-hidden="true"
+      loading="lazy"
+      sizes="(max-width: 1080px) 100vw, 1080px"
     />
   );
 }

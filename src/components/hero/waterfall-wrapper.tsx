@@ -52,7 +52,7 @@ export function WaterfallWrapper({ children }: { children: React.ReactNode }) {
         className="pointer-events-none absolute inset-x-0 z-0 flex justify-center"
         style={{ top: canvasStyle.top, height: canvasStyle.height }}
       >
-        <div className="relative w-full max-w-[1080px]">
+        <div className="relative w-full max-w-[1080px] h-full overflow-hidden">
           <WaterfallCanvas />
         </div>
       </div>
