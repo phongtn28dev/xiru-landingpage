@@ -10,6 +10,10 @@ const description =
 
 export const siteMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: '/images/logo/favicon.ico',
+    shortcut: '/images/logo/favicon.ico',
+  },
   title: {
     default: title,
     template: '%s | XIRU',

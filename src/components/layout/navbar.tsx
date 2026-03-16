@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { NAV_LINKS, SITE_CONFIG } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
@@ -30,11 +31,14 @@ export function Navbar() {
         }`}
       >
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-heading text-[20px] font-bold text-accent-gold"
-        >
-          {SITE_CONFIG.name}
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logo/logo (1).svg"
+            alt={SITE_CONFIG.name}
+            width={80}
+            height={32}
+            priority
+          />
         </Link>
 
         {/* Desktop nav links */}
