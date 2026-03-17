@@ -57,27 +57,27 @@ export const PILLARS = [
 export const STEPS = [
   {
     step: 1,
-    title: 'Clarity beyond the noise',
+    title: 'Clarity beyond\n the noise',
     description:
-      'Our AI analyzes market trends, on-chain data, and macro indicators to cut through the noise and surface what matters.',
+      'Xiru helps you understand the logic behind every\n move through long-term market analysis,\n not short-term speculation.',
   },
   {
     step: 2,
-    title: 'Strategy tailored to you',
+    title: 'Strategy tailored to\n your holdings',
     description:
-      'Choose from proven allocation models or customize your own. Set risk tolerance, asset mix, and rebalancing frequency.',
+      'By connecting your wallet, Xiru builds personalized\n guidance around your existing assets and updates\n it through monthly rebalancing.',
   },
   {
     step: 3,
-    title: 'Full control, always',
+    title: 'You stay in\n full control',
     description:
-      'Connect your non-custodial wallet. We never touch your funds — you approve every transaction directly from your wallet.',
+      'Your crypto stays in your wallet at all times. Xiru\n guides the strategy, but every decision remains\n entirely in your hands.',
   },
   {
     step: 4,
-    title: 'Monthly rebalancing',
+    title: 'Monthly\n rebalancing',
     description:
-      'Each month, XIRU suggests portfolio adjustments based on the latest data. Review, approve, and execute in one click.',
+      'Your strategy is reviewed and adjusted every\n month to stay aligned with market conditions while\n maintaining a long-term direction.',
   },
 ] as const;
 
@@ -130,21 +130,21 @@ export const FAQ_ITEMS = [
   {
     question: 'How long is the free trial?',
     answer:
-      'You get a 14-day free trial with full access to all features. No credit card required to start.',
+      '14 days with full access to all Pro features. No credit card required to start.',
   },
   {
-    question: 'Can I switch plans?',
+    question: 'Can I switch plans or cancel at any time?',
     answer:
-      'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.',
+      'Absolutely. Upgrade, downgrade, or cancel anytime.',
   },
   {
-    question: 'What wallets are supported?',
+    question: 'What wallets do you support?',
     answer:
-      'XIRU supports all major non-custodial wallets including MetaMask, Ledger, Trezor, and WalletConnect-compatible wallets.',
+      'Our system only supports EVM compatible platforms wallets like MetaMask, Rabby,  Coinbase Wallet.',
   },
   {
-    question: 'Is this for short-term investment?',
+    question: 'Can I make short-term investment?',
     answer:
-      'XIRU is designed for long-term crypto buying strategies. Our approach focuses on disciplined accumulation and monthly rebalancing rather than day trading.',
+      'Because short-term investing is driven more by noise, volatility, and reaction than by real conviction. Xiru is built around long-term strategy, where disciplined positioning and patience create stronger, more sustainable growth over time.',
   },
 ] as const;

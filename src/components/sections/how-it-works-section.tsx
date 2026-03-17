@@ -11,7 +11,7 @@ export function HowItWorksSection() {
       id="how-it-works"
       aria-label="How it works"
       className="px-6 py-[128px]"
-      style={{ background: 'linear-gradient(180deg, transparent 0%, #19150D 45%, #1C241C 100%)' }}
+      style={{ background: 'linear-gradient(180deg, transparent 0%, #19150D 50%, #19150D 100%)' }}
     >
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
@@ -29,29 +29,29 @@ export function HowItWorksSection() {
           {/* Center gold line — visible on md+ */}
           <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-accent-gold/40 via-accent-gold/20 to-transparent md:block" />
 
-          <div className="space-y-16 md:space-y-24">
+          <div className="space-y-8">
             {STEPS.map((step, i) => {
               const isEven = i % 2 === 0;
               return (
                 <div key={step.step} className="relative flex w-full flex-col items-center py-4 md:flex-row md:justify-between">
                   {/* Timeline dot — visible on md+ */}
-                  <ScrollReveal delay={i * 0.1 + 0.2} direction="none" className="absolute left-1/2 top-[10px] hidden -translate-x-1/2 md:block">
+                  <ScrollReveal delay={i * 0.1 + 0.2} direction="none" className="absolute left-1/2 top-[76px] hidden -translate-x-1/2 md:block">
                     <div className="flex h-[40px] w-[40px] items-center justify-center rounded-full border-2 border-accent-gold/30 bg-bg-card/30">
                       <div className="h-[6px] w-[6px] rounded-full bg-accent-gold" />
                     </div>
                   </ScrollReveal>
 
                   {/* Left side */}
-                  <div className={`w-full text-center md:w-[45%] ${isEven ? 'md:text-left' : 'hidden md:block'}`}>
+                  <div className={`w-full text-center ${isEven ? 'md:text-left' : 'hidden md:block'}`}>
                     {isEven && (
                       <ScrollReveal delay={i * 0.1} direction="left">
                         <span className="mb-2 block font-heading text-[28px] font-medium text-white md:text-[36px]">
                           0{step.step}
                         </span>
-                        <h3 className="font-heading text-[24px] font-medium tracking-tight text-accent-gold leading-[1.2] md:text-[36px]">
+                        <h3 className="font-heading text-[24px] font-medium tracking-tight text-accent-gold leading-[1.2] md:text-[36px] whitespace-pre-line">
                           {step.title}
                         </h3>
-                        <p className="mt-3 font-body-alt text-[14px] font-light leading-[22px] text-text-muted md:max-w-[420px]">
+                        <p className="mt-3 font-body-alt text-[14px] font-light leading-[22px] text-text-muted md:max-w-[420px] whitespace-pre-line">
                           {step.description}
                         </p>
                       </ScrollReveal>
@@ -59,17 +59,17 @@ export function HowItWorksSection() {
                   </div>
 
                   {/* Right side */}
-                  <div className={`w-full mt-8 md:mt-0 text-center md:w-[45%] ${!isEven ? 'md:text-right' : 'hidden md:block'}`}>
+                  <div className={`w-full mt-8 md:mt-0 text-center ${!isEven ? 'md:text-right' : 'hidden md:block'}`}>
                     {!isEven && (
                       <ScrollReveal delay={i * 0.1} direction="right">
-                        <div className="md:ml-auto md:max-w-[420px]">
+                        <div className="md:ml-auto">
                           <span className="mb-2 block font-heading text-[28px] font-medium text-white md:text-[36px]">
                             0{step.step}
                           </span>
-                          <h3 className="font-heading text-[24px] font-medium tracking-tight text-accent-gold leading-[1.2] md:text-[36px]">
+                          <h3 className="font-heading text-[24px] font-medium tracking-tight text-accent-gold leading-[1.2] md:text-[36px] whitespace-pre-line">
                             {step.title}
                           </h3>
-                          <p className="mt-3 font-body-alt text-[14px] font-light leading-[22px] text-text-muted">
+                          <p className="mt-3 font-body-alt text-[14px] font-light leading-[22px] text-text-muted whitespace-pre-line">
                             {step.description}
                           </p>
                         </div>

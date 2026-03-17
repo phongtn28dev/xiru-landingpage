@@ -9,7 +9,7 @@ export function ProductPreviewSection() {
     <section
       aria-label="Product preview"
       className="px-6 py-[128px]"
-      style={{ background: 'linear-gradient(180deg, #1C241C 0%, #19150D 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #19150D 0%, #19150D 100%)' }}
     >
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>

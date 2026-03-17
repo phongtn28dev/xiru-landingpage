@@ -24,14 +24,14 @@ export function Navbar() {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
       <nav
-        className={`flex w-full max-w-full items-center justify-between rounded-full border border-nav-border px-6 py-3 transition-all duration-300 ${
+        className={`relative flex w-full max-w-full items-center justify-between rounded-full border border-nav-border px-6 py-3 transition-all duration-300 ${
           scrolled
             ? 'bg-nav-bg/90 backdrop-blur-md shadow-lg'
             : 'bg-nav-bg/70 backdrop-blur-sm'
         }`}
       >
-        {/* Logo */}
-        <Link href="/" className="flex items-center">
+        {/* Logo — left */}
+        <Link href="/" className="flex shrink-0 items-center">
           <Image
             src="/images/logo/logo (1).svg"
             alt={SITE_CONFIG.name}
@@ -41,8 +41,8 @@ export function Navbar() {
           />
         </Link>
 
-        {/* Desktop nav links */}
-        <ul className="hidden items-center gap-6 md:flex">
+        {/* Desktop nav links — absolutely centered */}
+        <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <a
@@ -55,7 +55,7 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTAs */}
+        {/* Desktop CTAs — right */}
         <div className="hidden items-center gap-3 md:flex">
           <Button variant="ghost" size="sm" href={`${SITE_CONFIG.appUrl}/login`}>
             Log in

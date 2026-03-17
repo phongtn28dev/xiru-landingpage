@@ -12,14 +12,14 @@ export function FaqSection() {
       id="faq"
       aria-label="Frequently asked questions"
       className="px-6 py-[128px] h-[726px]"
-      style={{ background: 'linear-gradient(180deg, #19150D 0%, #1C241C 55%, #19150D 100%)' }}
+      style={{ background: 'linear-gradient(180deg, var(--color-bg-card) 0%, var(--color-bg-secondary) 50%, var(--color-bg-card) 100%)' }}
     >
       <div className="mx-auto max-w-2xl">
         <ScrollReveal>
           <SectionHeading
             tag="FAQ"
-            title="Common questions"
-            goldWord="questions"
+            title="Questions? "
+            goldWord="Answered."
           />
         </ScrollReveal>
 
