@@ -25,21 +25,21 @@ export function HeroSection() {
 
         <p
           data-waterfall-start
-          className="mx-auto mt-6 max-w-xl font-body-alt text-[15.2px] leading-[25.84px] font-light text-text-muted md:text-[17px] md:leading-7 opacity-0 animate-[fadeUp_0.8s_cubic-bezier(0.25,0.46,0.45,0.94)_forwards]"
+          className="mx-auto mt-6 max-w-2xl font-body-alt text-[15.2px] leading-[25.84px] font-light text-text-muted md:text-[17px] md:leading-7 opacity-0 animate-[fadeUp_0.8s_cubic-bezier(0.25,0.46,0.45,0.94)_forwards]"
           style={{ animationDelay: '0.3s' }}
         >
-          AI-powered market analysis, non-custodial wallet integration, and
-          monthly portfolio rebalancing — designed for long-term investors.
+          Xiru helps you build a long-term crypto buying strategy designed to grow your wealth with intelligent guidance,{' '}
+          <span className="text-accent-gold">non-custodial execution, and full control of your assets at every step.</span>
         </p>
 
         <div
           className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center opacity-0 animate-[fadeUp_0.8s_cubic-bezier(0.25,0.46,0.45,0.94)_forwards]"
           style={{ animationDelay: '0.45s' }}
         >
-          <Button variant="primary" size="lg" href={`${SITE_CONFIG.appUrl}/signup`}>
+          <Button variant="primary" size="lg" href={`${SITE_CONFIG.appUrl}/signup`} className='border-2 border-accent-gold'>
             Start free trial
           </Button>
-          <Button variant="outline" size="lg" href={`${SITE_CONFIG.appUrl}/login`}>
+          <Button variant="primary" size="lg" href={`${SITE_CONFIG.appUrl}/login`} className='bg-[#14211F]! border-2 border-accent-gold hover:text-white/90 focus:ring-accent-gold/50'>
             Log in
           </Button>
         </div>

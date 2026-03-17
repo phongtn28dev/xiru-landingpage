@@ -10,14 +10,14 @@ export function FinalCtaSection() {
     <section
       aria-label="Get started"
       className="relative overflow-hidden px-6 py-[128px]"
-      style={{ background: 'linear-gradient(180deg, #19150D 0%, #1C241C 50%, #1C241C 100%)' }}
+      style={{ background: 'linear-gradient(180deg, varvar(--color-bg-secondary) 0%, var(--color-bg-secondary) 50%, var(--color-bg-secondary) 100%)' }}
     >
       {/* Radial gold glow */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse at center, rgba(227,198,158,0.08) 0%, transparent 60%)',
+            'radial-gradient(ellipse at center, color-mix(in srgb, var(--color-accent-gold) 8%, transparent) 0%, transparent 60%)',
         }}
       />
 

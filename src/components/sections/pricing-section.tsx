@@ -15,13 +15,13 @@ export function PricingSection() {
       id="pricing"
       aria-label="Pricing"
       className="px-6 py-[128px]"
-      style={{ background: 'linear-gradient(180deg, #19150D 0%, #1C241C 50%, #1C241C 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #19150D 0%, #19150D 55%, #19150D 100%)' }}
     >
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <SectionHeading
             tag="Pricing"
-            title="Transparent, simple pricing"
+            title="Transparent, simple"
             goldWord="simple"
             subtitle="Start free for 14 days. No credit card required."
           />

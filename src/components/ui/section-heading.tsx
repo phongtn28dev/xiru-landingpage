@@ -37,11 +37,11 @@ export function SectionHeading({
   return (
     <div className={`${alignClass} ${className}`}>
       {tag && (
-        <span className="mb-4 inline-block font-body text-[12px] font-medium uppercase tracking-[3px] text-accent-gold">
+        <span className="mb-4 inline-block font-body text-[12px] font-normal uppercase leading-[18px] tracking-[3px] text-gold-muted">
           {tag}
         </span>
       )}
-      <h2 className="font-heading text-[32px] leading-[1.15] font-medium text-white md:text-[45.72px] md:leading-[54.864px]">
+      <h2 className="font-heading text-[32px] leading-[1.15] font-normal text-white md:text-[60px] md:leading-[54.86px]">
         {renderTitle()}
       </h2>
       {subtitle && (

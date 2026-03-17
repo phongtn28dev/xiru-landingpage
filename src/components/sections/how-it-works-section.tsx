@@ -11,7 +11,7 @@ export function HowItWorksSection() {
       id="how-it-works"
       aria-label="How it works"
       className="px-6 py-[128px]"
-      style={{ background: 'transparent' }}
+      style={{ background: 'linear-gradient(180deg, transparent 0%, #19150D 45%, #1C241C 100%)' }}
     >
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
@@ -20,7 +20,6 @@ export function HowItWorksSection() {
               tag="How it works"
               title="Strategy, not speculation"
               goldWord="Strategy"
-              subtitle="Four steps to a disciplined crypto investment approach."
             />
           </div>
         </ScrollReveal>
@@ -49,7 +48,7 @@ export function HowItWorksSection() {
                         <span className="mb-2 block font-heading text-[28px] font-medium text-white md:text-[36px]">
                           0{step.step}
                         </span>
-                        <h3 className="font-heading text-[24px] font-medium tracking-tight text-[#E3C69E] leading-[1.2] md:text-[36px]">
+                        <h3 className="font-heading text-[24px] font-medium tracking-tight text-accent-gold leading-[1.2] md:text-[36px]">
                           {step.title}
                         </h3>
                         <p className="mt-3 font-body-alt text-[14px] font-light leading-[22px] text-text-muted md:max-w-[420px]">
@@ -67,7 +66,7 @@ export function HowItWorksSection() {
                           <span className="mb-2 block font-heading text-[28px] font-medium text-white md:text-[36px]">
                             0{step.step}
                           </span>
-                          <h3 className="font-heading text-[24px] font-medium tracking-tight text-[#E3C69E] leading-[1.2] md:text-[36px]">
+                          <h3 className="font-heading text-[24px] font-medium tracking-tight text-accent-gold leading-[1.2] md:text-[36px]">
                             {step.title}
                           </h3>
                           <p className="mt-3 font-body-alt text-[14px] font-light leading-[22px] text-text-muted">

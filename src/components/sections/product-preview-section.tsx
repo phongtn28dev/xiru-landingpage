@@ -14,10 +14,10 @@ export function ProductPreviewSection() {
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <SectionHeading
-            tag="Platform"
-            title="See your strategy in action"
+            tag="Product"
+            title="See it in action"
             goldWord="action"
-            subtitle="A clean dashboard that puts clarity first."
+            subtitle="A workspace designed for flow. Every pixel serves a purpose."
           />
         </ScrollReveal>
 

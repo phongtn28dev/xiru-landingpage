@@ -41,7 +41,7 @@ export function WaterfallWrapper({ children }: { children: React.ReactNode }) {
     <div
       ref={wrapperRef}
       className="relative overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #19150D 0%, #1C241C 14.73%, #1C241C 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #19150D 0%, #1C241C 55%, #1C241C 100%)' }}
     >
       {/* Section content renders first */}
       <div className="relative z-10">
