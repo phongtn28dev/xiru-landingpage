@@ -26,7 +26,7 @@ export function PricingSection() {
           />
         </ScrollReveal>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div id="pricing" className="mt-16 grid gap-6 md:grid-cols-3 scroll-mt-24">
           {PRICING_TIERS.map((tier, i) => (
             <ScrollReveal key={tier.name} delay={i * 0.12}>
               <Card
