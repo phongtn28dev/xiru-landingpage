@@ -25,7 +25,7 @@ export function ProductPreviewSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="mx-auto mt-12 max-w-4xl">
+          <div className="mx-auto mt-12 max-w-[1080px]">
             {/* Browser frame chrome */}
             <div className="overflow-hidden rounded-2xl border border-border-subtle shadow-2xl shadow-accent-gold/5">
               {/* Title bar */}

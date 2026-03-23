@@ -32,6 +32,7 @@ export function PricingSection() {
               <Card
                 variant={tier.popular ? 'featured' : 'default'}
                 className="relative flex h-full flex-col"
+                style={tier.popular ? { background: 'linear-gradient(180deg, rgba(227, 198, 158, 0.06) 0%, rgba(0, 0, 0, 0) 40%)' } : undefined}
               >
                 {tier.popular && (
                   <Badge>Popular</Badge>
@@ -69,12 +70,13 @@ export function PricingSection() {
                 </ul>
 
                 <Button
-                  variant={tier.popular ? 'primary' : 'outline'}
+                  variant={tier.popular ? 'primary' : 'ghost'}
                   size="md"
                   href={`${SITE_CONFIG.appUrl}/en/onboarding/starter-type?plan=${tier.name.toLowerCase()}`}
-                  className="mt-6 w-full"
+                  className={`mt-6 w-full ${tier.popular ? 'text-bg-primary font-semibold' : 'border border-white/10 text-text-muted'}`}
+                  style={tier.popular ? { background: 'linear-gradient(180deg, #E3C69E 0%, #C9A574 100%)' } : undefined}
                 >
-                  Get started
+                  {tier.cta}
                 </Button>
               </Card>
             </ScrollReveal>

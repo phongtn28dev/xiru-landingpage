@@ -29,7 +29,7 @@ export function HeroSection() {
       {/* Hero text content — higher z-index, above the globe */}
       <div className="relative z-10 mx-auto max-w-7xl pt-16 text-center animate-[fadeIn_0.6s_ease-out_forwards]">
         <h1
-          className="font-heading text-[28px] leading-[1.1] font-medium text-white sm:text-[36px] md:text-[56px] lg:text-[68.58px] lg:leading-[75.438px] opacity-0 animate-[fadeUp_0.8s_cubic-bezier(0.25,0.46,0.45,0.94)_forwards]"
+          className="font-heading text-[24px] leading-[1.15] font-medium text-white sm:text-[32px] md:text-[56px] lg:text-[68.58px] lg:leading-[75.438px] opacity-0 animate-[fadeUp_0.8s_cubic-bezier(0.25,0.46,0.45,0.94)_forwards]"
           style={{ animationDelay: '0.15s' }}
         >
           Invest in <GoldText>crypto</GoldText>
@@ -40,7 +40,7 @@ export function HeroSection() {
 
         <p
           data-waterfall-start
-          className="mx-auto mt-6 max-w-4xl font-body-alt text-[15.2px] leading-[25.84px] font-light text-white md:text-[17px] md:leading-7 opacity-0 animate-[fadeUp_0.8s_cubic-bezier(0.25,0.46,0.45,0.94)_forwards]"
+          className="mx-auto mt-6 max-w-4xl font-body-alt text-[13px] leading-[21px] font-light text-white sm:text-[15.2px] sm:leading-[25.84px] md:text-[17px] md:leading-7 opacity-0 animate-[fadeUp_0.8s_cubic-bezier(0.25,0.46,0.45,0.94)_forwards]"
           style={{ animationDelay: '0.3s' }}
         >
           XIRU helps you build a long-term crypto buying strategy designed to grow your wealth with intelligent guidance,{' '}
@@ -48,21 +48,21 @@ export function HeroSection() {
         </p>
 
         <div
-          className="mt-10 flex items-center gap-3 sm:mt-16 flex-row justify-center opacity-0 animate-[fadeUp_0.8s_cubic-bezier(0.25,0.46,0.45,0.94)_forwards]"
+          className="mt-10 flex flex-col items-center gap-3 sm:mt-16 sm:flex-row justify-center opacity-0 animate-[fadeUp_0.8s_cubic-bezier(0.25,0.46,0.45,0.94)_forwards]"
           style={{ animationDelay: '0.45s' }}
         >
-          <Button variant="primary" size="lg" href={`${SITE_CONFIG.appUrl}/en/onboarding/starter-type`} className='border-2 border-accent-gold bg-[#69644F]/60! hover:bg-[#69644F]/80 focus:ring-accent-gold/50 hover:text-white/60'>
+          <Button variant="primary" size="lg" href={`${SITE_CONFIG.appUrl}/en/onboarding/starter-type`} className='w-full sm:w-auto border-2 border-accent-gold bg-[#69644F]/60! hover:bg-[#69644F]/80 focus:ring-accent-gold/50 hover:text-white/60'>
             Start free trial &rarr;
           </Button>
-          <Button variant="primary" size="lg" href={`${SITE_CONFIG.appUrl}/en/sign-in`} className='bg-[#14211F]! border-2 border-accent-gold bg-[#14211F]/60! hover:text-white/60 focus:ring-accent-gold/50'>
+          <Button variant="primary" size="lg" href={`${SITE_CONFIG.appUrl}/en/sign-in`} className='w-full sm:w-auto bg-[#14211F]! border-2 border-accent-gold bg-[#14211F]/60! hover:text-white/60 focus:ring-accent-gold/50'>
             Log in
           </Button>
         </div>
       </div>
 
       {/* "AI-powered long-term / crypto investment system" — above globe, below CTAs */}
-      <div className="relative z-10 mt-0 pt-10 md:mt-auto sm:pt-[25vh] md:pt-[60vh] pb-8 text-center">
-        <p className="font-heading text-[22px] leading-[1.3] sm:text-[28px] md:text-[40px] lg:text-[48px]">
+      <div className="relative z-10 mt-0 pt-10 lg:mt-auto sm:pt-25 lg:pt-[60vh] pb-8 text-center">
+        <p className="font-heading text-[20px] leading-[1.3] sm:text-[26px] md:text-[40px] lg:text-[48px]">
           <em className="text-accent-gold italic">AI-powered long-term</em>
           <br />
           <span className="text-white not-italic">crypto investment system</span>

@@ -10,6 +10,7 @@ interface ButtonProps {
   size?: ButtonSize;
   href?: string;
   className?: string;
+  style?: React.CSSProperties;
   onClick?: () => void;
 }
 
@@ -33,20 +34,21 @@ export function Button({
   size = 'md',
   href,
   className = '',
+  style,
   onClick,
 }: ButtonProps) {
   const classes = `inline-flex items-center justify-center rounded-full font-body font-medium ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} className={classes} style={style}>
         {children}
       </Link>
     );
   }
 
   return (
-    <button onClick={onClick} className={classes}>
+    <button onClick={onClick} className={classes} style={style}>
       {children}
     </button>
   );
