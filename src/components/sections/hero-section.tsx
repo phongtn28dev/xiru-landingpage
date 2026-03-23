@@ -10,8 +10,8 @@ export function HeroSection() {
     <section
       id="hero"
       aria-label="Hero"
-      className="relative bg-black px-6 pt-24 pb-0 overflow-hidden"
-      style={{ minHeight: '100svh' }}
+      className="relative px-6 pt-24 pb-0 overflow-hidden"
+      style={{ minHeight: '100svh', background: 'linear-gradient(180deg, #000000 0%, #000000 60%, #1C241C 100%)' }}
     >
       {/* Globe background image — lowest z-index */}
       <div className="absolute inset-x-0 bottom-0 z-0 opacity-0 animate-[fadeIn_1.2s_ease-out_0.5s_forwards]">

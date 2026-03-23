@@ -22,7 +22,7 @@ export function Footer() {
 
         {/* Contact */}
         <div>
-          <h3 className="mb-4 font-body text-[13px] font-semibold uppercase tracking-[2px] text-text-dim">
+          <h3 className="mb-4 font-body text-[13px] font-semibold uppercase tracking-[2px] text-white/50">
             Contact
           </h3>
           <ul className="space-y-3">
@@ -32,7 +32,7 @@ export function Footer() {
                   href={link.href}
                   target={link.href.startsWith('http') ? '_blank' : undefined}
                   rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="font-body text-[13.6px] text-text-muted transition-colors hover:text-white"
+                  className="font-body text-[13.6px] text-white/30 transition-colors hover:text-white"
                 >
                   {link.label}
                 </a>
@@ -43,7 +43,7 @@ export function Footer() {
 
         {/* Legal */}
         <div>
-          <h3 className="mb-4 font-body text-[13px] font-semibold uppercase tracking-[2px] text-text-dim">
+          <h3 className="mb-4 font-body text-[13px] font-semibold uppercase tracking-[2px] text-white/50">
             Legal
           </h3>
           <ul className="space-y-3">
@@ -51,7 +51,7 @@ export function Footer() {
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="font-body text-[13.6px] text-text-muted transition-colors hover:text-white"
+                  className="font-body text-[13.6px] text-white/30 transition-colors hover:text-white"
                 >
                   {link.label}
                 </Link>
