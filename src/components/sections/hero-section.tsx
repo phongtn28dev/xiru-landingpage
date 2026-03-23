@@ -10,24 +10,24 @@ export function HeroSection() {
     <section
       id="hero"
       aria-label="Hero"
-      className="relative px-6 pt-24 pb-0 overflow-hidden"
-      style={{ minHeight: '100svh', background: 'linear-gradient(180deg, #000000 0%, #000000 60%, #1C241C 100%)' }}
+      className="relative flex flex-col px-6 pt-24 pb-0 overflow-hidden min-h-[80svh] sm:min-h-[85svh] lg:min-h-svh"
+      style={{ background: 'linear-gradient(180deg, #000000 0%, #000000 60%, #1C241C 100%)' }}
     >
-      {/* Globe background image — lowest z-index */}
-      <div className="absolute inset-x-0 bottom-0 z-0 opacity-0 animate-[fadeIn_1.2s_ease-out_0.5s_forwards]">
+      {/* Globe background image — fixed height on mobile/tablet, auto on desktop */}
+      <div className="absolute inset-x-0 bottom-0 z-0 h-[360px] sm:h-[560px] md:h-[600px] lg:h-auto opacity-0 animate-[fadeIn_1.2s_ease-out_0.5s_forwards]">
         <Image
           src="/images/hero/image.png"
           alt=""
           width={1280}
-          height={900}
+          height={600}
           priority
-          className="mx-auto w-full h-full object-contain"
+          className="mx-auto w-full h-full object-cover object-bottom lg:object-contain"
           aria-hidden="true"
         />
       </div>
 
       {/* Hero text content — higher z-index, above the globe */}
-      <div className="relative z-10 mx-auto max-w-7xl pt-16 text-center animate-[fadeIn_0.6s_ease-out_forwards]">
+      <div className="relative z-10 mx-auto max-w-7xl pt-8 sm:pt-16 text-center animate-[fadeIn_0.6s_ease-out_forwards]">
         <h1
           className="font-heading text-[24px] leading-[1.15] font-medium text-white sm:text-[32px] md:text-[56px] lg:text-[68.58px] lg:leading-[75.438px] opacity-0 animate-[fadeUp_0.8s_cubic-bezier(0.25,0.46,0.45,0.94)_forwards]"
           style={{ animationDelay: '0.15s' }}
@@ -51,17 +51,17 @@ export function HeroSection() {
           className="mt-10 flex items-center gap-3 sm:mt-16 flex-row justify-center opacity-0 animate-[fadeUp_0.8s_cubic-bezier(0.25,0.46,0.45,0.94)_forwards]"
           style={{ animationDelay: '0.45s' }}
         >
-          <Button variant="primary" size="lg" href={`${SITE_CONFIG.appUrl}/en/onboarding/starter-type`} className='w-full sm:w-auto border-2 border-accent-gold bg-[#69644F]/60! hover:bg-[#69644F]/80 focus:ring-accent-gold/50 hover:text-white/60'>
+          <Button variant="primary" size="lg" href={`${SITE_CONFIG.appUrl}/en/onboarding/starter-type`} className='border-2 border-accent-gold bg-[#69644F]/60! hover:bg-[#69644F]/80 focus:ring-accent-gold/50 hover:text-white/60'>
             Start free trial &rarr;
           </Button>
-          <Button variant="primary" size="lg" href={`${SITE_CONFIG.appUrl}/en/sign-in`} className='w-full sm:w-auto bg-[#14211F]! border-2 border-accent-gold bg-[#14211F]/60! hover:text-white/60 focus:ring-accent-gold/50'>
+          <Button variant="primary" size="lg" href={`${SITE_CONFIG.appUrl}/en/sign-in`} className='bg-[#14211F]! border-2 border-accent-gold bg-[#14211F]/60! hover:text-white/60 focus:ring-accent-gold/50'>
             Log in
           </Button>
         </div>
       </div>
 
-      {/* "AI-powered long-term / crypto investment system" — above globe, below CTAs */}
-      <div className="relative z-10 mt-0 pt-10 lg:mt-auto sm:pt-25 lg:pt-[60vh] pb-8 text-center">
+      {/* "AI-powered" text — close to buttons on mobile, pushed to bottom on sm+ */}
+      <div className="relative z-10 mt-4 pb-8 text-center px-6 sm:mt-auto lg:pt-[60vh]">
         <p className="font-heading text-[20px] leading-[1.3] sm:text-[26px] md:text-[40px] lg:text-[48px]">
           <em className="text-accent-gold italic">AI-powered long-term</em>
           <br />
