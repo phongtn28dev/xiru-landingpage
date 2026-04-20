@@ -2,7 +2,7 @@
 
 Cinematic one-scroll landing page for [XIRU](https://xiru.io) — a long-term crypto buying strategy platform.
 
-## Tech Stack
+## Tech Stack 
 
 - **Next.js 16** (App Router, SSG)
 - **TypeScript** (strict mode)
